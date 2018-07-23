@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --configuration test --aot --build-optimizer"
+    "postinstall": "ng build --configuration --aot"
   },
   "engines": {
     "node": "9.11.1",
