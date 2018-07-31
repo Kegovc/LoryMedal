@@ -43,8 +43,24 @@ ul{
 	}
 }
 
-
-.dropdown-item:hover{
-	background-color: #F7C8BE;
+.dropdown-menu{
+  li{
+    width: 100%;
+    .dropdown-item{
+      width: 100%;
+      &:hover{
+        background-color: #F7C8BE;
+      }
+    }
+  }
 }
 
+.catalogo-drop{
+  padding-left: 24px;
+  padding-right: 24px;
+  .catal,.arrow-catal{
+    display: inherit;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

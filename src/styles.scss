@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* #-COLORES */
-.rosa-logo{
+.rosa-logo, .active{
 	color: #F7C8BE !important;
 }
 
@@ -20,4 +20,6 @@
 .row{
     margin-left: 0;
     margin-right: 0;
+    width: 100%;
 }
+

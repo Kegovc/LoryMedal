@@ -12,22 +12,23 @@
 
 <nav class="fuente-open-sans" style="margin-top: 25px; border-top: 2px solid #F7C8BE">
 	<ul class="col-xl-12 text-right">
-		<li><a routerLink="">Inicio</a></li>
-    <li class="btn-group" dropdown>
-      <a id="button-basic" dropdownToggle class="rosa-logo dropdown-toggle"
+		<li><a routerLink="/Inicio" routerLinkActive="active">Inicio</a></li>
+    <li class="btn-group catalogo-drop"  dropdown>
+      <a class="catal"  routerLink="/Catalogo" routerLinkActive="active">Catalogo</a>
+      <a class="dropdown-toggle arrow-catal rosa-logo" id="button-basic" dropdownToggle
               aria-controls="dropdown-basic">
-              Catalogo<span class="caret"></span>
+              <span class="caret"></span>
       </a>
       <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
           role="menu" aria-labelledby="button-basic">
-          <li role="menuitem"><a class="dropdown-item" href="#">Sofás Cama</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Modulares</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Salas</a></li>
+          <li role="menuitem"><a class="dropdown-item" routerLink="/Catalogo/Sofas" >Sofás Cama</a></li>
+          <li role="menuitem"><a class="dropdown-item" routerLink="/Catalogo/Modulare" >Modulares</a></li>
+          <li role="menuitem"><a class="dropdown-item" routerLink="/Catalogo/Salas" >Salas</a></li>
       </ul>
     </li>
-	  <li><a routerLink="/Telas">Telas</a></li>
-		<li><a routerLink="/Noticias">Noticias</a></li>
-		<li><a routerLink="/Contacto">Contacto</a></li>
+	  <li><a routerLink="/Telas" routerLinkActive="active">Telas</a></li>
+		<li><a routerLink="/Noticias" routerLinkActive="active">Noticias</a></li>
+		<li><a routerLink="/Contacto" routerLinkActive="active">Contacto</a></li>
 	</ul>
 
 
