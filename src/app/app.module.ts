@@ -11,6 +11,11 @@ import { TelasComponent } from './othersStuffs/telas/telas.component';
 import { NoticiasComponent } from './othersStuffs/noticias/noticias.component';
 import { ContactoComponent } from './othersStuffs/contacto/contacto.component';
 import { LegalComponent } from './othersStuffs/legal/legal.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
+// angular ngx
+
+import { BsDropdownModule, CarouselModule } from 'ngx-bootstrap'; // de esta manera solo anexa el nombre del module que importes
 
 
 @NgModule({
@@ -26,6 +31,9 @@ import { LegalComponent } from './othersStuffs/legal/legal.component';
     LegalComponent
   ],
   imports: [
+  	BsDropdownModule.forRoot(),
+	CarouselModule.forRoot(),
+  	AngularFontAwesomeModule,
     BrowserModule,
     routing,
   ],

@@ -1,12 +1,69 @@
-<ol>
-  <li><a routerLink="">Inicio</a></li>
-  <li><a routerLink="/Catalogo">Catalogo</a></li>
-  <li><a routerLink="/Telas">Telas</a></li>
-  <li><a routerLink="/Noticias">Noticias</a></li>
-  <li><a routerLink="/Contacto">Contacto</a></li>
-</ol>
+<div class="row fuente-open-sans">
+
+	<div class="col-xl-4 offset-xl-8" style="margin-top: 25px">
+		<h1 class="rosa-logo">Contáctanos!</h1>
+		<h4><fa name="phone" class="rosa-logo" style="margin-right: 20px;"></fa>01-800-711-5793</h4><!-- en lugar de <i class="fa fa-{glicon}"></i> usa <fa name="glicon"></fa>  la cosa esta ahi pero no aparece .-.-->
+		<h4><fa name="envelope-o" class="rosa-logo" style="margin-right: 15px; "></fa>info@muebleslory.com</h4>
+	</div>
+
+</div>
 
 
-<p>
-  headers works!
-</p>
+
+<nav class="fuente-open-sans" style="margin-top: 25px; border-top: 2px solid #F7C8BE">
+	<ul class="col-xl-12 text-right">
+		<li><a routerLink="">Inicio</a></li>
+    <li class="btn-group" dropdown>
+      <a id="button-basic" dropdownToggle class="rosa-logo dropdown-toggle"
+              aria-controls="dropdown-basic">
+              Catalogo<span class="caret"></span>
+      </a>
+      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" href="#">Sofás Cama</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Modulares</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Salas</a></li>
+      </ul>
+    </li>
+	  <li><a routerLink="/Telas">Telas</a></li>
+		<li><a routerLink="/Noticias">Noticias</a></li>
+		<li><a routerLink="/Contacto">Contacto</a></li>
+	</ul>
+
+
+
+</nav>
+
+
+
+<!--
+<div class="row btn-group" dropdown>
+
+	<div class="col-xl-6">
+		<p>asd</p>
+	</div>
+
+	<div class="col-xl-6">
+		  <button id="button-disabled-item" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+				  aria-controls="dropdown-disabled-item">
+			Button dropdown <span class="caret"></span>
+		  </button>
+		<ul>
+			<li><a>ASDASd</a></li>
+
+			<li id="button-disabled-item" dropdownToggle aria-controls="dropdown-disabled-item">
+				<a class=" dropdown-toggle">dasdas  <span class="caret"></span></a>
+			</li>
+
+			<li><a>asdasdasd</a></li>
+		</ul>
+
+		<ol id="dropdown-disabled-item" *dropdownMenu class="dropdown-menu" style="" role="menu" aria-labelledby="button-disabled-item">
+			<li class="disabled" role="menuitem"><a class="dropdown-item disabled" href="#">Action</a></li>
+			<li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+			<li role="menuitem"><a class="dropdown-item" href="#">Something elsehere</a></li>
+		</ol>
+
+	</div>
+</div>
+-->

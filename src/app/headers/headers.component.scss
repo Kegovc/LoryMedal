@@ -1,8 +1,50 @@
-ol{
-  text-align: right;
-  li{
-    display: inline;
-    margin-right: 16px;
+/*ul{
 
-  }
+
+	li{
+    	display: inline;
+
+  	}
+
+	a{
+		color: #000000;
+		font-size: 18px;
+		padding-right: 25px;
+	}
+
+	a:hover{
+		text-decoration: none;
+		color: #000000;
+	}
+}*/
+
+
+
+ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+
+
+	li{
+    display: inline-block;
+    vertical-align: top;
+	}
+
+	a{
+		display: block;
+		padding: 12px 24px;
+		font-size: 20px;
+		color: #000000;
+	}
+
+	a:hover{
+		text-decoration: none;
+	}
 }
+
+
+.dropdown-item:hover{
+	background-color: #F7C8BE;
+}
+
