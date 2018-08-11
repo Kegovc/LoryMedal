@@ -12,8 +12,8 @@ const appRoutes: Routes = [
   {path: 'Inicio', component: InicioComponent, canActivate: []},
   {path: 'Telas', component: TelasComponent, canActivate: []},
   {path: 'Catalogo', component: CatalogosComponent, canActivate: []},
+  {path: 'Catalogo/:tipo', component: CatalogosComponent, canActivate: []},
   {path: 'Noticias', component: NoticiasComponent, canActivate: []},
-  {path: 'Contacto/:tipo', component: ContactoComponent, canActivate: []},
   {path: 'Contacto', component: ContactoComponent, canActivate: []},
   {path: 'Legal', component: LegalComponent, canActivate: []},
   {path: '**', redirectTo: '/Inicio'}

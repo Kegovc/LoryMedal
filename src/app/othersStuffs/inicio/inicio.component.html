@@ -1,181 +1,179 @@
 <app-headers></app-headers>
-
-
-<!-- #-CAROUSEL -->
 <div>
-	<carousel [interval]="myInterval" [noPause]="noPause"><!-- eso que ven dentro de los brackets es una coneccion al data binding del m-v-vm-->
-		
-		<slide style="height: 60vh">
-			<img src="assets/imagenes/peyton.jpg" alt="First slide" style="display: block; width: 100%; height: 450px">
-		</slide>
-		
 
-		<slide style="height: 60vh">
-			<img src="assets/imagenes/royal.jpg" alt="Second slide" style="display: block; width: 100%; height: 450px">
-		</slide>
-		
+    <!-- #-CAROUSEL -->
+    <div>
+      <carousel [interval]="myInterval" [noPause]="noPause"><!-- eso que ven dentro de los brackets es una coneccion al data binding del m-v-vm-->
 
-		<slide style="height: 60vh">
-			<img src="assets/imagenes/paris.jpg" alt="Third slide" style="display: block; width: 100%; height: 450px">		
-		</slide>
-		
-	</carousel>
+        <slide style="height: 60vh">
+          <img src="assets/imagenes/peyton.jpg" alt="First slide" style="display: block; width: 100%; height: 450px">
+        </slide>
+
+
+        <slide style="height: 60vh">
+          <img src="assets/imagenes/royal.jpg" alt="Second slide" style="display: block; width: 100%; height: 450px">
+        </slide>
+
+
+        <slide style="height: 60vh">
+          <img src="assets/imagenes/paris.jpg" alt="Third slide" style="display: block; width: 100%; height: 450px">
+        </slide>
+
+      </carousel>
+    </div>
+
+
+
+    <!-- #-CATEGORIAS -->
+    <div class="row fuente-open-sans" style="margin-top: 65px;">
+
+      <div class="col-md-4 text-center">
+        <h2><strong>Sofás Cama</strong></h2>
+        <a href="#">
+          <img src="assets/imagenes/sofa-cama-ibiza.jpg" style="width: 350px; height: 250px; margin-top: 25px; border-radius: 20px">
+        </a>
+      </div>
+
+
+      <div class="col-md-4 text-center">
+        <h2><strong>Modulares</strong></h2>
+        <a href="#">
+          <img src="assets/imagenes/victoria.jpg" style="width: 350px; height: 250px; margin-top: 25px; border-radius: 20px">
+        </a>
+      </div>
+
+
+      <div class="col-md-4 text-center">
+        <h2><strong>Salas</strong></h2>
+        <a href="#">
+          <img src="assets/imagenes/bugatti.jpg" style="width: 350px; height: 250px; margin-top: 25px; border-radius: 20px">
+        </a>
+      </div>
+
+    </div>
+
+
+
+    <!-- #-VALORES -->
+    <div class="fuente-open-sans" style="background-color: #F7C8BE; margin-top: 65px">
+      <br>
+      <h2 class="text-center"><strong>Nuestra misión como empresa Mexicana</strong></h2>
+      <br>
+
+      <p class="container text-center">Lograr la satisfacción total de nuestros clientes a través de la elaboración de un producto de calidad, que le proporcione comodidad al usuario y que le permita acceder al mismo a través de un precio razonable, que satisfaga sus gustos decorativos y cualitativos, complementados con un servicio de venta, entrega y atención eficiente que le garantice el buen funcionamiento de cada uno de nuestros artículos.</p>
+      <br>
+    </div>
+
+
+
+    <!-- #-NOTICIAS -->
+    <div class="container fuente-open-sans">
+
+      <h2 class="text-center" style="margin-top: 50px; margin-bottom: 35px"><strong>Últimas Noticias</strong></h2>
+
+      <!-- Noticias -->
+      <div class="row">
+
+        <!-- Noticia 1 -->
+        <div class="col-md-4  d-flex align-items-stretch">
+          <div class="card">
+            <a href="#"><img class="card-img-top" style="height: 200px" src="assets/imagenes/acacia.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+              <h5 class="card-title text-center" style="margin-top: 10px">Expo Mueblera verano 2018</h5>
+              <p class="card-text text-justify" style="font-size: 14px">Encuenta los últimos modelos de Muebles Lory en la Expo Mueblera verano</p>
+              <p class="card-text text-right"><small class="text-muted">12/06/2018</small></p>
+              </div>
+          </div>
+        </div>
+
+        <!-- Noticia 2 -->
+        <div class="col-md-4  d-flex align-items-stretch">
+          <div class="card">
+            <a href="#"><img class="card-img-top" style="height: 200px" src="assets/imagenes/austria.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+              <h5 class="card-title text-center" style="margin-top: 10px">5 tips para que tu comedor se vea bien</h5>
+              <p class="card-text text-justify" style="font-size: 14px">No necesitas ser una decoradora para lograr que tu comedor se vea excelente.</p>
+              <p class="card-text text-right"><small class="text-muted">12/06/2018</small></p>
+              </div>
+          </div>
+        </div>
+
+        <!-- Noticia 3 -->
+        <div class="col-md-4  d-flex align-items-stretch">
+          <div class="card">
+            <a href="#"><img class="card-img-top" style="height: 200px" src="assets/imagenes/vesubio.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+              <h5 class="card-title text-center" style="margin-top: 10px">Detalles en nuestros productos</h5>
+              <p class="card-text text-justify" style="font-size: 14px">Cuidamos todos los aspectos de nuestros productos</p>
+              <p class="card-text text-right"><small class="text-muted">12/06/2018</small></p>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <!-- #-CONTACTO -->
+    <div class="fuente-open-sans" style="margin-top: 65px">
+      <br>
+      <h2 class="text-center"><strong>Contáctanos</strong></h2>
+      <br>
+
+      <form>
+
+        <div class="row">
+
+        <!-- Input Nombre, Email, Asunto -->
+        <div class="col-md-4 offset-md-1">
+          <div class="form-group">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="name" class="form-control" placeholder="Ingresa tu nombre">
+            </div>
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Ingresa tu correo o telefono">
+            </div>
+
+            <div class="form-group">
+              <label>Asunto</label>
+              <input type="text" class="form-control" placeholder="Ingresa tu asunto">
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Textera mensaje -->
+        <div class="col-md-4 offset-md-2">
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea class="form-control" rows="8" placeholder="¿En que podemos ayudarte?"></textarea>
+            </div>
+        </div>
+
+
+        <!-- Buton Enviar -->
+        <div class="offset-md-9 col-md-2">
+          <div class="form-group text-right">
+            <br>
+              <button type="submit" class="btn btn-enviar"style="border-radius: 2px; background-color: #E6E6E6; color: #000000; width: 80%">Enviar</button>
+          </div>
+          </div>
+
+          </div>
+
+      </form>
+    </div>
+
+
+
+
+    <!-- #-PROVEEDORES -->
+    <div></div>
 </div>
-
-
-
-<!-- #-CATEGORIAS -->
-
-<div class="row fuente-open-sans" style="margin-top: 65px;">
-	
-	<div class="col-xl-4 text-center">
-		<h2><strong>Sofás Cama</strong></h2>
-		<a href="#">
-			<img src="assets/imagenes/sofa-cama-ibiza.jpg" style="width: 350px; height: 250px; margin-top: 25px; border-radius: 20px">
-		</a>		
-	</div>
-	
-	
-	<div class="col-xl-4 text-center">
-		<h2><strong>Modulares</strong></h2>
-		<a href="#">
-			<img src="assets/imagenes/3.jpg" style="width: 350px; height: 250px; margin-top: 25px; border-radius: 20px">
-		</a>
-	</div>
-	
-	
-	<div class="col-xl-4 text-center">
-		<h2><strong>Salas</strong></h2>
-		<a href="#">
-			<img src="assets/imagenes/bugatti.jpg" style="width: 350px; height: 250px; margin-top: 25px; border-radius: 20px">
-		</a>
-	</div>
-	
-</div>
-
-
-
-<!-- #-VALORES --> 
-<div class="fuente-open-sans" style="background-color: #F7C8BE; margin-top: 65px">
-	<br>
-	<h2 class="text-center"><strong>Nuestra misión como empresa Mexicana</strong></h2>
-	<br>
-	
-	<p class="container text-center">Lograr la satisfacción total de nuestros clientes a través de la elaboración de un producto de calidad, que le proporcione comodidad al usuario y que le permita acceder al mismo a través de un precio razonable, que satisfaga sus gustos decorativos y cualitativos, complementados con un servicio de venta, entrega y atención eficiente que le garantice el buen funcionamiento de cada uno de nuestros artículos.</p>
-	<br>
-</div>
-
-
-
-<!-- #-NOTICIAS -->
-<div class="container fuente-open-sans">
-	
-	<h2 class="text-center" style="margin-top: 50px; margin-bottom: 35px"><strong>Últimas Noticias</strong></h2>
-
-	<!-- Noticias -->
-	<div class="row">
-		
-		<!-- Noticia 1 -->
-		<div class="col-xl-4">
-			<div class="card">
-				<a href="#"><img class="card-img-top" src="assets/imagenes/1.jpg" alt="Card image cap"></a>
-			  	<div class="card-body">
-					<h5 class="card-title text-center" style="margin-top: 10px">Expo Mueblera verano 2018</h5>
-					<p class="card-text text-justify" style="font-size: 14px">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<p class="card-text text-right"><small class="text-muted">12/06/2018</small></p>
-			  	</div>
-			</div>
-		</div>
-		
-		<!-- Noticia 2 -->
-		<div class="col-xl-4">
-			<div class="card">
-				<a href="#"><img class="card-img-top" src="assets/imagenes/1.jpg" alt="Card image cap"></a>
-			  	<div class="card-body">
-					<h5 class="card-title text-center" style="margin-top: 10px">Expo Mueblera verano 2018</h5>
-					<p class="card-text text-justify" style="font-size: 14px">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<p class="card-text text-right"><small class="text-muted">12/06/2018</small></p>
-			  	</div>
-			</div>
-		</div>
-		
-		<!-- Noticia 3 -->
-		<div class="col-xl-4">
-			<div class="card">
-				<a href="#"><img class="card-img-top" src="assets/imagenes/1.jpg" alt="Card image cap"></a>
-			  	<div class="card-body">
-					<h5 class="card-title text-center" style="margin-top: 10px">Expo Mueblera verano 2018</h5>
-					<p class="card-text text-justify" style="font-size: 14px">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<p class="card-text text-right"><small class="text-muted">12/06/2018</small></p>
-			  	</div>
-			</div>
-		</div>	
-		
-	</div>
-</div> 
-
-
-
-<!-- #-CONTACTO -->
-<div class="fuente-open-sans" style="background-color: #F7C8BE; margin-top: 65px">
-	<br>
-	<h2 class="text-center"><strong>Contáctanos</strong></h2>	
-	<br>
-	
-	<form>
-		
-		<div class="row">
-			
-		<!-- Input Nombre, Email, Asunto -->
-		<div class="col-xl-4 offset-xl-1">
-			<div class="form-group">	 
-				<div class="form-group">
-					<label>Nombre</label>
-					<input type="name" class="form-control" placeholder="Ingresa tu nombre">
-				</div>
-
-				<div class="form-group">
-					<label>Email</label>
-					<input type="email" class="form-control" placeholder="Ingresa tu correo o telefono">
-				</div> 
-
-				<div class="form-group">
-					<label>Asunto</label>
-					<input type="text" class="form-control" placeholder="Ingresa tu asunto">
-				</div>
-			</div>			
-		</div>
-		
-		
-		<!-- Textera mensaje -->
-		<div class="col-xl-4 offset-xl-2">
-			<div class="form-group">
-				<label>Mensaje</label>
-				<textarea class="form-control" rows="8" placeholder="¿En que podemos ayudarte?"></textarea>
-  			</div>
-		</div>
-			
-			
-		<!-- Buton Enviar -->
-		<div class="offset-xl-9 col-xl-2">
-			<div class="form-group text-right">
-				<br>
-  				<button type="submit" class="btn btn-enviar"style="border-radius: 2px; background-color: #E6E6E6; color: #000000; width: 80%">Enviar</button>
-			</div>
-	  	</div>
-		
-  		</div>
-		
-  		
-  
-</form>
-</div>
-
-
-
-
-<!-- #-PROVEEDORES -->
-<div></div>
-
 <app-footers></app-footers>
+
 

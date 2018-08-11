@@ -1,9 +1,12 @@
-<div class="row fuente-open-sans">
+<div class="row fuente-open-sans" style="margin-top: 25px">
+  <div class="col-md-7">
+    <img class="logo" src="./assets/Logo-lory.png">
+  </div>
+	<div class="col-md-4 " >
 
-	<div class="col-xl-4 offset-xl-8" style="margin-top: 25px">
 		<h1 class="rosa-logo">Contáctanos!</h1>
-		<h4><fa name="phone" class="rosa-logo" style="margin-right: 20px;"></fa>01-800-711-5793</h4><!-- en lugar de <i class="fa fa-{glicon}"></i> usa <fa name="glicon"></fa>  la cosa esta ahi pero no aparece .-.-->
-		<h4><fa name="envelope-o" class="rosa-logo" style="margin-right: 15px; "></fa>info@muebleslory.com</h4>
+		<h5><fa name="phone" class="rosa-logo" style="margin-right: 20px;"></fa>36566655 / 36562990</h5><!-- en lugar de <i class="fa fa-{glicon}"></i> usa <fa name="glicon"></fa>  la cosa esta ahi pero no aparece .-.-->
+		<h5><fa name="envelope-o" class="rosa-logo" style="margin-right: 15px; "></fa>gpoindmueblero@gmail.com</h5>
 	</div>
 
 </div>
@@ -11,60 +14,26 @@
 
 
 <nav class="fuente-open-sans" style="margin-top: 25px; border-top: 2px solid #F7C8BE">
-	<ul class="col-xl-12 text-right">
+	<ul class="col-md-12 text-right">
 		<li><a routerLink="/Inicio" routerLinkActive="active">Inicio</a></li>
-    <li class="btn-group catalogo-drop"  dropdown>
-      <a class="catal"  routerLink="/Catalogo" routerLinkActive="active">Catalogo</a>
-      <a class="dropdown-toggle arrow-catal rosa-logo" id="button-basic" dropdownToggle
-              aria-controls="dropdown-basic">
-              <span class="caret"></span>
-      </a>
-      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
-          role="menu" aria-labelledby="button-basic">
-          <li role="menuitem"><a class="dropdown-item" routerLink="/Catalogo/Sofas" >Sofás Cama</a></li>
-          <li role="menuitem"><a class="dropdown-item" routerLink="/Catalogo/Modulare" >Modulares</a></li>
-          <li role="menuitem"><a class="dropdown-item" routerLink="/Catalogo/Salas" >Salas</a></li>
-      </ul>
-    </li>
-	  <li><a routerLink="/Telas" routerLinkActive="active">Telas</a></li>
+		<li class="btn-group catalogo-drop"  dropdown>
+			<a class="catal"  routerLink="/Catalogo" routerLinkActive="active">Catalogo</a>
+		  	<a class="dropdown-toggle arrow-catal rosa-logo" id="button-basic" dropdownToggle
+				  aria-controls="dropdown-basic">
+				  <span class="caret"></span>
+		  	</a>
+
+			<ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+			  role="menu" aria-labelledby="button-basic">
+			  <li role="menuitem"><a class="dropdown-item" routerLink="/Catalogo/Sofas" >Sofás Cama</a></li>
+			  <li role="menuitem"><a class="dropdown-item" routerLink="/Catalogo/Modulare" >Modulares</a></li>
+			  <li role="menuitem"><a class="dropdown-item" routerLink="/Catalogo/Salas" >Salas</a></li>
+		  	</ul>
+		</li>
+	  	<li><a routerLink="/Telas" routerLinkActive="active">Telas</a></li>
 		<li><a routerLink="/Noticias" routerLinkActive="active">Noticias</a></li>
 		<li><a routerLink="/Contacto" routerLinkActive="active">Contacto</a></li>
 	</ul>
-
-
-
 </nav>
 
 
-
-<!--
-<div class="row btn-group" dropdown>
-
-	<div class="col-xl-6">
-		<p>asd</p>
-	</div>
-
-	<div class="col-xl-6">
-		  <button id="button-disabled-item" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-				  aria-controls="dropdown-disabled-item">
-			Button dropdown <span class="caret"></span>
-		  </button>
-		<ul>
-			<li><a>ASDASd</a></li>
-
-			<li id="button-disabled-item" dropdownToggle aria-controls="dropdown-disabled-item">
-				<a class=" dropdown-toggle">dasdas  <span class="caret"></span></a>
-			</li>
-
-			<li><a>asdasdasd</a></li>
-		</ul>
-
-		<ol id="dropdown-disabled-item" *dropdownMenu class="dropdown-menu" style="" role="menu" aria-labelledby="button-disabled-item">
-			<li class="disabled" role="menuitem"><a class="dropdown-item disabled" href="#">Action</a></li>
-			<li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-			<li role="menuitem"><a class="dropdown-item" href="#">Something elsehere</a></li>
-		</ol>
-
-	</div>
-</div>
--->
