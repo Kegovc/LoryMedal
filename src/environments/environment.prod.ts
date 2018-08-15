@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: `https://httpwww.muebleslory.com/api/`
+  api: `https://www.muebleslory.com/api/`
 };

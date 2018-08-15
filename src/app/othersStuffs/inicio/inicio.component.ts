@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContenidoService } from '../../shared/services/contenido.service';
 import { FormGroup, FormBuilder, Validators } from '../../../../node_modules/@angular/forms';
-import { ToastrService } from '../../../../node_modules/ngx-toastr';
 
 @Component({
   selector: 'app-inicio',
@@ -20,8 +19,7 @@ export class InicioComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private contenido: ContenidoService,
-    private toastr: ToastrService,
+    private contenido: ContenidoService
   ) {
     this.contenido.getThreeNotices()
     .then((response: any) => {
@@ -52,11 +50,6 @@ export class InicioComponent implements OnInit {
     for (const k in form.controls) {
       if (form.controls.hasOwnProperty(k)) {
         this.errorMessages[k] = this.hasError(form, k, ['required', 'email', 'pattern'], true);
-        if (this.errorMessages[k]) {
-          this.toastr.error('Campo vacio o no cumple con el formato', 'Error en el formulario', {
-            timeOut: 3000
-          });
-        }
       }
     }
   }

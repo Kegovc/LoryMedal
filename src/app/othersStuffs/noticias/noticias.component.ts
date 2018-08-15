@@ -15,7 +15,6 @@ export class NoticiasComponent implements OnInit {
     this.contenido.getNotices()
     .then((response: any) => {
       console.log(response);
-      
       if (response.fun.access) {
         this.noticias = response.fun.data;
       }

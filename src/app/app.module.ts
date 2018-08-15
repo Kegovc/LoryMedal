@@ -13,14 +13,12 @@ import { NoticiasDetalleComponent } from './othersStuffs/noticias/noticias-detal
 import { ContactoComponent } from './othersStuffs/contacto/contacto.component';
 import { LegalComponent } from './othersStuffs/legal/legal.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // angular ngx
 
 import { BsDropdownModule, CarouselModule } from 'ngx-bootstrap'; // de esta manera solo anexa el nombre del module que importes
 import { ContenidoService } from './shared/services/contenido.service';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
-import { ToastrModule } from 'ngx-toastr';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ValidatedInputDirective } from './shared/directives/validated-input.directive';
 
@@ -39,8 +37,6 @@ import { ValidatedInputDirective } from './shared/directives/validated-input.dir
     ValidatedInputDirective
   ],
   imports: [
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
     FormsModule,
     ReactiveFormsModule,
     BsDropdownModule.forRoot(),

@@ -1,7 +1,6 @@
 import { ContenidoService } from './../../shared/services/contenido.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '../../../../node_modules/@angular/forms';
-import { ToastrService } from '../../../../node_modules/ngx-toastr';
 
 @Component({
   selector: 'app-contacto',
@@ -16,8 +15,7 @@ export class ContactoComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private contenido: ContenidoService,
-    private toastr: ToastrService,
+    private contenido: ContenidoService
   ) { }
 
 
@@ -37,11 +35,6 @@ export class ContactoComponent implements OnInit {
     for (const k in form.controls) {
       if (form.controls.hasOwnProperty(k)) {
         this.errorMessages[k] = this.hasError(form, k, ['required', 'email', 'pattern'], true);
-        if (this.errorMessages[k]) {
-          this.toastr.error('Campo vacio o no cumple con el formato', 'Error en el formulario', {
-            timeOut: 3000
-          });
-        }
       }
     }
   }
