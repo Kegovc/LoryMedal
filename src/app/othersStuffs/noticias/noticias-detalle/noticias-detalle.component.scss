@@ -1,0 +1,29 @@
+
+.container {
+  background-color: white;
+  padding: 50px;
+  min-height: 414px;
+  .img-noticias-detalles{
+    float: left;
+    img{
+      height: 300px;
+      margin-right: 35px;
+      margin-bottom: 15px;
+    }
+  }
+  a{
+    color:#F7C8BE;
+  }
+}
+
+.noti-slider{
+  overflow:  scroll;
+  display: -webkit-box;
+  .d-flex{
+    &:hover{
+      opacity: .5;
+    }
+    max-width: 25%;
+    margin: 0 10px;
+  }
+}

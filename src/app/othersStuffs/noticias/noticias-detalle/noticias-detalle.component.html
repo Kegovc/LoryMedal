@@ -1,0 +1,29 @@
+<app-headers></app-headers>
+<div class="container fuente-open-sans">
+    
+    <div class="img-noticias-detalles">
+        <img src="{{noticia.imagen}}" >
+    </div>
+    <h2 class="text-center" style="margin-top: 50px; margin-bottom: 15px;"><strong>{{noticia.titulo}}</strong></h2>
+    
+    <!-- Noticias -->
+    
+        <div class="post-content">
+            <p *ngFor="let row of noticia.extenso">{{row}}</p>
+            <p *ngIf="noticia.fuente!==''"><a href="{{noticia.fuente}}" target="_blank">Fuente</a></p>
+        </div>
+    
+</div>
+<div class="row noti-slider">
+
+    <!-- Noticia 1 -->
+    <div class=" d-flex align-items-stretch" style="margin-bottom: 25px" *ngFor="let noticia of noticias">
+      <div class="card">
+        <a href="{{noticia.url}}"><img class="card-img-top" style="height: 200px" src="{{noticia.imagen}}" alt="Card image cap"></a>
+          <div class="card-body">
+          <h5 class="card-title text-center" style="margin-top: 10px"><b>{{noticia.titulo}}</b></h5>
+          </div>
+      </div>
+    </div>
+	</div>
+<app-footers></app-footers>

@@ -2,21 +2,21 @@
 <div>
 
     <!-- #-CAROUSEL -->
-    <div>
+    <div class="lory_carousel">
       <carousel [interval]="myInterval" [noPause]="noPause"><!-- eso que ven dentro de los brackets es una coneccion al data binding del m-v-vm-->
 
-        <slide style="height: 60vh">
-          <img src="assets/imagenes/peyton.jpg" alt="First slide" style="display: block; width: 100%; height: 450px">
+        <slide class="lory_slide">
+          <img src="assets/imagenes/peyton.jpg" alt="First slide" style="display: block; width: 100%; ">
         </slide>
 
 
-        <slide style="height: 60vh">
-          <img src="assets/imagenes/royal.jpg" alt="Second slide" style="display: block; width: 100%; height: 450px">
+        <slide class="lory_slide">
+          <img src="assets/imagenes/royal.jpg" alt="Second slide" style="display: block; width: 100%; ">
         </slide>
 
 
-        <slide style="height: 60vh">
-          <img src="assets/imagenes/paris.jpg" alt="Third slide" style="display: block; width: 100%; height: 450px">
+        <slide class="lory_slide">
+          <img src="assets/imagenes/paris.jpg" alt="Third slide" style="display: block; width: 100%; ">
         </slide>
 
       </carousel>
@@ -29,7 +29,7 @@
 
       <div class="col-md-4 text-center">
         <h2><strong>Sofás Cama</strong></h2>
-        <a href="#">
+        <a routerLink="/Catalogo/Sofa">
           <img src="assets/imagenes/sofa-cama-ibiza.jpg" style="width: 350px; height: 250px; margin-top: 25px; border-radius: 20px">
         </a>
       </div>
@@ -37,7 +37,7 @@
 
       <div class="col-md-4 text-center">
         <h2><strong>Modulares</strong></h2>
-        <a href="#">
+        <a routerLink="/Catalogo/Modulares">
           <img src="assets/imagenes/victoria.jpg" style="width: 350px; height: 250px; margin-top: 25px; border-radius: 20px">
         </a>
       </div>
@@ -45,7 +45,7 @@
 
       <div class="col-md-4 text-center">
         <h2><strong>Salas</strong></h2>
-        <a href="#">
+        <a routerLink="/Catalogo/Salas">
           <img src="assets/imagenes/bugatti.jpg" style="width: 350px; height: 250px; margin-top: 25px; border-radius: 20px">
         </a>
       </div>
@@ -75,40 +75,17 @@
       <div class="row">
 
         <!-- Noticia 1 -->
-        <div class="col-md-4  d-flex align-items-stretch">
+        <div class="col-md-4  d-flex align-items-stretch" *ngFor="let noticia of noticias">
           <div class="card">
-            <a href="#"><img class="card-img-top" style="height: 200px" src="assets/imagenes/acacia.jpg" alt="Card image cap"></a>
+            <a href="{{noticia.url}}"><img class="card-img-top" style="height: 200px" src="{{noticia.imagen}}" alt="Card image cap"></a>
               <div class="card-body">
-              <h5 class="card-title text-center" style="margin-top: 10px">Expo Mueblera verano 2018</h5>
-              <p class="card-text text-justify" style="font-size: 14px">Encuenta los últimos modelos de Muebles Lory en la Expo Mueblera verano</p>
-              <p class="card-text text-right"><small class="text-muted">12/06/2018</small></p>
+              <h5 class="card-title text-center" style="margin-top: 10px"><b>{{noticia.titulo}}</b></h5>
+              <p class="card-text text-justify" style="font-size: 14px">{{noticia.noticia}}</p>
+              <p class="card-text text-right"><small class="text-muted">{{noticia.fecha}}</small></p>
               </div>
           </div>
         </div>
 
-        <!-- Noticia 2 -->
-        <div class="col-md-4  d-flex align-items-stretch">
-          <div class="card">
-            <a href="#"><img class="card-img-top" style="height: 200px" src="assets/imagenes/austria.jpg" alt="Card image cap"></a>
-              <div class="card-body">
-              <h5 class="card-title text-center" style="margin-top: 10px">5 tips para que tu comedor se vea bien</h5>
-              <p class="card-text text-justify" style="font-size: 14px">No necesitas ser una decoradora para lograr que tu comedor se vea excelente.</p>
-              <p class="card-text text-right"><small class="text-muted">12/06/2018</small></p>
-              </div>
-          </div>
-        </div>
-
-        <!-- Noticia 3 -->
-        <div class="col-md-4  d-flex align-items-stretch">
-          <div class="card">
-            <a href="#"><img class="card-img-top" style="height: 200px" src="assets/imagenes/vesubio.jpg" alt="Card image cap"></a>
-              <div class="card-body">
-              <h5 class="card-title text-center" style="margin-top: 10px">Detalles en nuestros productos</h5>
-              <p class="card-text text-justify" style="font-size: 14px">Cuidamos todos los aspectos de nuestros productos</p>
-              <p class="card-text text-right"><small class="text-muted">12/06/2018</small></p>
-              </div>
-          </div>
-        </div>
 
       </div>
     </div>
@@ -121,7 +98,7 @@
       <h2 class="text-center"><strong>Contáctanos</strong></h2>
       <br>
 
-      <form>
+      <form [formGroup]="concatoForm" (submit)="doContacto()">
 
         <div class="row">
 
@@ -130,17 +107,17 @@
           <div class="form-group">
             <div class="form-group">
               <label>Nombre</label>
-              <input type="name" class="form-control" placeholder="Ingresa tu nombre">
+              <input type="name" name="nombre" [validatedInput]="errorMessages.nombre" formControlName="nombre" [(ngModel)]="data.nombre" class="form-control" placeholder="Ingresa tu nombre">
             </div>
 
             <div class="form-group">
               <label>Email</label>
-              <input type="email" class="form-control" placeholder="Ingresa tu correo o telefono">
+              <input type="email" name="email" [validatedInput]="errorMessages.email" formControlName="email" [(ngModel)]="data.email" class="form-control" placeholder="Ingresa tu correo o telefono">
             </div>
 
             <div class="form-group">
               <label>Asunto</label>
-              <input type="text" class="form-control" placeholder="Ingresa tu asunto">
+              <input type="text" name="asunto" [validatedInput]="errorMessages.asunto" formControlName="asunto" [(ngModel)]="data.asunto" class="form-control" placeholder="Ingresa tu asunto">
             </div>
           </div>
         </div>
@@ -150,7 +127,7 @@
         <div class="col-md-4 offset-md-2">
           <div class="form-group">
             <label>Mensaje</label>
-            <textarea class="form-control" rows="8" placeholder="¿En que podemos ayudarte?"></textarea>
+            <textarea name="mensaje" [validatedInput]="errorMessages.mensaje" formControlName="mensaje" [(ngModel)]="data.mensaje" class="form-control" rows="8" placeholder="¿En que podemos ayudarte?"></textarea>
             </div>
         </div>
 

@@ -5,6 +5,7 @@ import { CatalogosComponent } from './catalogoStuffs/catalogos/catalogos.compone
 import { TelasComponent } from './othersStuffs/telas/telas.component';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './othersStuffs/inicio/inicio.component';
+import { NoticiasDetalleComponent } from './othersStuffs/noticias/noticias-detalle/noticias-detalle.component';
 
 
 
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
   {path: 'Catalogo', component: CatalogosComponent, canActivate: []},
   {path: 'Catalogo/:tipo', component: CatalogosComponent, canActivate: []},
   {path: 'Noticias', component: NoticiasComponent, canActivate: []},
+  {path: 'Noticias/:titulo', component: NoticiasDetalleComponent, canActivate: []},
   {path: 'Contacto', component: ContactoComponent, canActivate: []},
   {path: 'Legal', component: LegalComponent, canActivate: []},
   {path: '**', redirectTo: '/Inicio'}

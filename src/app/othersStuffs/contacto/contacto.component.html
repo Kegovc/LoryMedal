@@ -6,7 +6,7 @@
 	<br>
 	<h4 class="text-center">Uno de nuestros profesionales te atendera</h4>
 
-	<form>
+	<form [formGroup]="concatoForm" (submit)="doContacto()">
 		<div class="row">
 
 			<!-- Input Nombre, Email, Asunto -->
@@ -17,25 +17,25 @@
 					<!-- Nombre -->
 					<div class="form-group">
 						<label><strong>Nombre</strong></label>
-						<input type="name" class="form-control" placeholder="Ingresa tu nombre">
+						<input type="name"  name="nombre" [validatedInput]="errorMessages.nombre" formControlName="nombre" [(ngModel)]="data.nombre" class="form-control" placeholder="Ingresa tu nombre">
 					</div>
 
 					<!-- Correo -->
 					<div class="form-group">
 						<label><strong>Email</strong></label>
-						<input type="email" class="form-control" placeholder="Ingresa tu correo o telefono">
+						<input type="email"  name="email" [validatedInput]="errorMessages.email" formControlName="email" [(ngModel)]="data.email" class="form-control" placeholder="Ingresa tu correo o telefono">
 					</div>
 
 					<!-- Asunto -->
 					<div class="form-group">
 						<label><strong>Asunto</strong></label>
-						<input type="text" class="form-control" placeholder="Ingresa tu asunto">
+						<input type="text" name="asunto" [validatedInput]="errorMessages.asunto" formControlName="asunto" [(ngModel)]="data.asunto"  class="form-control" placeholder="Ingresa tu asunto">
 					</div>
 
 					<!-- Mensaje -->
 					<div class="form-group">
 						<label><strong>Mensaje</strong></label>
-						<textarea class="form-control" rows="8" placeholder="¿En que podemos ayudarte?"></textarea>
+						<textarea name="mensaje" [validatedInput]="errorMessages.mensaje" formControlName="mensaje" [(ngModel)]="data.mensaje"  class="form-control" rows="8" placeholder="¿En que podemos ayudarte?"></textarea>
 					</div>
 
 					<!-- Boton Enviar -->
